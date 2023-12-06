@@ -29,13 +29,13 @@ Window position                Max
 import java.util.Scanner;
 import java.util.Collections;
 import java.util.*;
-// import java.lang;
 
 public class Hard1{
   public static void maxSlideWin(int [] arr, int n, int k){
     ArrayList<Integer> res = new ArrayList<>();
     int max=Integer.MIN_VALUE;
 
+    // calculating the max element in the range of the Sliding window
     for(int i=0;i<n-k+1;i++){
       max=Integer.MIN_VALUE;
       for(int j=i;j<i+k;j++){
@@ -43,6 +43,7 @@ public class Hard1{
           max=arr[j];
         }
       }
+      // storing the max element for each sliding window range in an ArrayList;
       res.add(max);
     }
 
